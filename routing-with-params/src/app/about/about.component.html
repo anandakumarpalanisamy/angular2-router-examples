@@ -1,0 +1,13 @@
+<md-card class="outer-card">
+    <md-card-title>About</md-card-title>
+    <md-card-content>
+        <ul>
+            <li><a [routerLink]="['/about']">Home</a></li>
+            <li><a [routerLink]="['/about/resources', 1]">Books</a></li>            
+            <li><a [routerLink]="['/about/resources', 2]">Videos</a></li>
+        </ul>
+        <div class="inner-outlet">
+            <router-outlet></router-outlet>
+        </div>
+    </md-card-content>
+</md-card>
