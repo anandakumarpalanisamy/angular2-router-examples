@@ -1,0 +1,11 @@
+<md-card>
+    <md-card-title>CRISES</md-card-title>
+    <md-card-content>
+        <md-nav-list>
+            <a md-list-item color="accent" *ngFor="let crisis of crises$ | async" [class.active]="crisis.id === selectedId"
+                [routerLink]="[crisis.id]"><button md-mini-fab>{{crisis.id}}</button><span>{{ crisis.name }}</span></a>
+        </md-nav-list>
+        <div style="height:20px;"></div>
+        <router-outlet></router-outlet>
+    </md-card-content>
+</md-card>

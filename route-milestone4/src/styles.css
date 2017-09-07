@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+/*
+md-nav-list {
+    background: #ff4081;
+}
+
+md-nav-list a {
+    color: #fff;
+    border-top: 1px solid #673ab7;
+    border-left: 1px solid #673ab7;
+    border-right: 1px solid #673ab7;
+}
+
+md-nav-list a:last-child {
+    border-bottom: 1px solid #673ab7;
+}
+*/
+
+md-nav-list a.active {
+    border: 1px solid #673ab7;
+}
+
+md-nav-list a span {
+    padding: 0 20px;
+}
