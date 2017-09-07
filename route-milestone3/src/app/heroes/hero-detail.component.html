@@ -1,0 +1,18 @@
+<md-card>
+    <md-card-title>Hero Detail Component</md-card-title>
+    <md-card-content>
+        <div *ngIf="hero$ | async as hero">
+            <md-chip-list>
+                <md-chip color="accent">{{ hero.name }}</md-chip>
+                <md-chip color="accent">Id: {{ hero.id }}</md-chip>
+            </md-chip-list>
+            <div style="height: 10px"></div>
+            <md-input-container>
+                <input mdInput [(ngModel)]="hero.name" placeholder="Name"/>
+            </md-input-container>
+            <p>
+                <button md-raised-button color="primary" (click)="gotoHeroes(hero)">Back</button>
+            </p>
+        </div>
+    </md-card-content>
+</md-card>
