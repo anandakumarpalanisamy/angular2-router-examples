@@ -7,22 +7,22 @@ import { ResourcesComponent } from './about/resources/resources.component';
 
 export const routes : Routes = [
 
-    { 
-        path: '',
-        component: HomeComponent
-    },
     {
         path: 'about',
         component: AboutComponent,
-        children: [
+        children: [            
+            { 
+                path: 'resources', // url: about/resources
+                component: ResourcesComponent 
+            }, 
             { 
                 path: '', // url: about/
                 component: AboutHomeComponent 
             }, 
-            { 
-                path: 'resources', // url: about/resources
-                component: ResourcesComponent 
-            } 
         ]
+    },    
+    { 
+        path: '',
+        component: HomeComponent
     }
 ];
