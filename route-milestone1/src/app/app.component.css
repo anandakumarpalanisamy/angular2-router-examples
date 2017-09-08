@@ -1,0 +1,21 @@
+ul {
+    padding: 0px 0px;
+    margin: 5px auto;
+    height: 55px;
+}
+
+ul li {
+    padding: 10px 0px;
+    list-style: none;
+    display: inline-block;
+}
+
+li a {
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+li a:hover {    
+    background: #cccccc;
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+<md-card>
+    <md-card-title>HEROES</md-card-title>
+    <md-card-content>
+        <md-nav-list>
+            <a md-list-item color="accent" *ngFor="let hero of heroes$ | async" [class.active]="hero.id === selectedId"
+                [routerLink]="['/hero', hero.id]"><button md-mini-fab>{{hero.id}}</button><span>{{ hero.name }}</span></a>
+        </md-nav-list>
+        <div style="height:20px;"></div>
+        <button md-raised-button color="primary" routerLink="/sidekicks">Go to sidekicks</button>
+    </md-card-content>
+</md-card>
