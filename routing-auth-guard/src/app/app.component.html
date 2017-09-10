@@ -1,32 +1,14 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Angular Router - AuthGuard Demo</a>
+<md-toolbar color="primary">
+    <span>Angular Router - AuthGuard Demo</span>
+    <button md-raised-button color="accent" *ngIf="auth.isAuthenticated()"
+        (click)="auth.logout()">Log out</button>
+    <button md-icon-button color="accent" *ngIf="!auth.isAuthenticated()"
+        (click)="auth.login()"><md-icon>power_settings_new</md-icon>
+    </button>
+</md-toolbar>
 
-      <button
-        class="btn btn-primary btn-margin"
-        routerLink="/">
-          Home
-      </button>
+<div style="clear:both; height: 20px;"></div>
 
-      <button
-        class="btn btn-primary btn-margin"
-        *ngIf="!auth.isAuthenticated()"
-        (click)="auth.login()">
-          Log In
-      </button>
-
-      <button
-        class="btn btn-primary btn-margin"
-        *ngIf="auth.isAuthenticated()"
-        (click)="auth.logout()">
-          Log Out
-      </button>
-
-    </div>
-  </div>
-</nav>
-
-<main class="container">
-  <router-outlet></router-outlet>
-</main>
+<div>
+    <router-outlet></router-outlet>
+</div>

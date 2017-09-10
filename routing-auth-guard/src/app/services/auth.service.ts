@@ -11,7 +11,7 @@ export class AuthService {
         domain: 'ananda11k.auth0.com',
         responseType: 'token id_token',
         audience: 'https://ananda11k.auth0.com/userinfo',
-        redirectUri: 'http://localhost:4200/callback',      
+        redirectUri: 'http://localhost:4200/home',      
         scope: 'openid'
     });
 
@@ -27,7 +27,7 @@ export class AuthService {
         localStorage.removeItem('id_token');
         localStorage.removeItem('expires_at');
         // Go back to the home route
-        this.router.navigate(['/']);
+        this.router.navigate(['/logout']);
     }
 
     public isAuthenticated(): boolean {

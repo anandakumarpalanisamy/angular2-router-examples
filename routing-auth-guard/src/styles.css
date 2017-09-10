@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+button.mat-icon-button {    
+    padding: 0 0 0 980px;
+    min-width: 0;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+button.mat-raised-button {
+    margin-left: 920px;
+}
+
+md-card.mat-card {
+    margin: 50px 200px;
+    height: 350px;
+    background: #ffd740;
+}
+
+md-card.accent-bg {
+    height: 350px;
+    background: #673ab7;
+    color: #fff;
+}
